@@ -1,0 +1,11 @@
+Add(x,y)    (x=x+y)     .=y+x=x
+Addi(x,i)   (x=x+i)     .i+x=x
+Mult(x,y)   (x=x*y)     .1-=y||:.=x+x=x:||
+
+break_if_zero(x)        .=x~
+break_if_not_zero(x)    .1||:0=x~0:||=-3~
+
+break_if_equal(x,y)     .=y-=x~
+break_if_not_equal(x,y) .1||:0=y-=x.~0:||=-4~
+
+break_if_po
