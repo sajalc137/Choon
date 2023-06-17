@@ -24,8 +24,7 @@
 	char intbuf[20];
 	char secIDbuf[20];
 
-	
-
+	char* num_conv();
 
 %}
 
@@ -540,17 +539,17 @@ init_declarator_list
 init_declarator
 	: IDENTIFIER  '=' assignment_expression		
 		{
-			if(tempno > 0){
-				fprintf(fp_icg, "%s = t%d\n", $1, --tempno); 
-				fprintf(fp_quad, "\t=\t\tt%d\t\t  \t\t%s\n", tempno, $1);
-				tempno++;
-			}
-			else if(tempno == 0){
-				fprintf(fp_icg, "%s = %s\n", $1, $3); 
-				fprintf(fp_quad, "\t=\t\t%s\t\t  \t\t%s\n", $3, $1);
+			// if(tempno > 0){
+			// 	fprintf(fp_icg, "%s = t%d\n", $1, --tempno); 
+			// 	fprintf(fp_quad, "\t=\t\tt%d\t\t  \t\t%s\n", tempno, $1);
+			// 	tempno++;
+			// }
+			// else if(tempno == 0){
+			// 	fprintf(fp_icg, "%s = %s\n", $1, $3); 
+			// 	fprintf(fp_quad, "\t=\t\t%s\t\t  \t\t%s\n", $3, $1);
 		
-			}
-			
+			// }
+			fprintf(fp_choon, ". %s %s ", $1, num_conv($3));
 		}			
 	| IDENTIFIER
 	;
@@ -559,7 +558,7 @@ init_declarator
 assignment_expression
 	: conditional_expression		{	strcpy($$, $1); }
 	| unary_expression assignment_operator assignment_expression 		
-		{
+		{ 
 			switch(assignop){
 				case 0: 
 						// if(tempno > 0){
@@ -571,7 +570,8 @@ assignment_expression
 						// 	fprintf(fp_icg, "%s = %s\n", $1, $3); 
 						// 	fprintf(fp_quad, "\t=\t\t%s\t\t  \t\t%s\n", $3, $1);							
 						// }
-						fprintf(fp_choon, ". %s =%s ", $1, $3);
+						fprintf(fp_choon, ". %s %s ", $1, num_conv($3));
+						// fprintf(fp_choon, ". %s =%s ", $1, $3);
 						break;
 
 				case 1: 
@@ -994,6 +994,23 @@ void yyerror(const char *str){
 	printf("error: ");
 	printf("\033[0m");
 	printf("%s\n", str);
+}
+
+char* num_conv(const char* str) {
+    if (atoi(str) || *str == '0') return (char*)str;
+
+	size_t n = strlen(str);
+    char* result = (char*)malloc((n + 2) * sizeof(char));
+
+    if (result == NULL) {
+        printf("Memory allocation failed.\n");
+        return NULL;
+    }
+
+    *result = '=';
+    strcpy(result + 1, str);
+
+    return result;
 }
 
 
