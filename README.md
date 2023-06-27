@@ -1,6 +1,5 @@
 # Choon
-An esoteric programming language based on musical notation.
-
+A translator from C++ to the esoteric programming language Choon, based musical notation for syntax.
 
 ## Choon Instruction Set
 
@@ -67,3 +66,6 @@ John Cage is zero - '%-' and '%+' are no-ops (except that a single silence is ad
 Repeat Bars (`||:` and `:||`) create loops. The loop repeats based on the last note played before encountering `||:`. Zero or negative values jump to the matching `:||` to start playing from there. 
 
 John Cage indicates an infinite loop: `%||: :||` creates an infinite loop.
+
+### Tuning Fork
+The Tuning Fork instruction `~` is used to break out of loops. If the note played just before `~` is `C` (ie. 0), then immediately jump to the next `:||` instruction. If there is no further `:||` instruction, then the piece will terminate.
