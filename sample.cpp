@@ -1,8 +1,10 @@
 #include<iostream>
 using namespace std;
-int main(){
-	
-	int a;
-	int b;
-	a = b = 2;
+
+
+int main()
+{	
+	int a=1,b=2;
+	a+=b;
+	cout<<a;
 }

@@ -1,0 +1,8 @@
+Declarations at the start of program
+arithmetic operations between constants not allowed
+does not support ELSE-IF
+shift/reduce conflicts: ELSE resolved with latest IF
+
+Reserved Keywords:
+Instruction Set
+Temp Variables : t{n}
