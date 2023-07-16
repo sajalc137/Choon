@@ -65,7 +65,74 @@ John Cage is zero - '%-' and '%+' are no-ops (except that a single silence is ad
 ### Repeat Bars
 Repeat Bars (`||:` and `:||`) create loops. The loop repeats based on the last note played before encountering `||:`. Zero or negative values jump to the matching `:||` to start playing from there. 
 
-John Cage indicates an infinite loop: `%||: :||` creates an infinite loop.
+John Cage indicates an infinite loop: `%||: :||` creates an infinite loop. 
+<br/><br/>
+## Sample Programs
+<table>
+<thead>
+  <tr>
+    <th>C++ Code</th>
+    <th>Choon Code</th>
+    <th>Music Played</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+<td>
+      
+```C
+int a=1,b=2;
+a+=b;
+cout<<a;
+```
+</td>
+    <td>. C# + a C . D + b C . =b + a =a. =a + 0</td>
+    <td><a href="https://drive.google.com/file/d/1J8zS4RMy27HMR_0aCRrWcm4LdvUtG8Od/view?usp=sharing">Listen</a></td>
+</tr><tr>
+<td>
+      
+```C
+int a;
+a=20*30;
+cout<<a;
+```
+</td>
+    <td>. t0 C F#+D#+C + C ||: . F+C+C + t0 =t0 :|| . F#+D#+C + C - - C ||: . F+C+C - t0 =t0 :||. =t0 + a C  . =a + 0</td>
+    <td><a href="https://drive.google.com/file/d/1nBkXnamo_A9wyi3ucjmxAxVHff3O_Svv/view?usp=sharing">Listen</a></td>
+</tr>
+<tr>
+<td>
+      
+```C
+int a=0,i;
+for(i=0;i<10;i++){
+  a+=i;
+}
+cout<<a;
+```
+</td>
+    <td>. C + a C . C + i C % ||:. F+C + t0 C. =i + C - - t0 =t0. =t0 - C ||: C ~ :|| ~. =i + a =a . =i + i C#:|| . =a + 0</td>
+    <td><a href="https://drive.google.com/file/d/1pY-C51fgXuvlLK51AjW6l7TIlMhrwvFo/view?usp=sharing">Listen</a></td>
+</tr><tr>
+<td>
+      
+```C
+# Fibonacci
+int a=0,b=1,c,i;
+for(i=0;i<10;i++){
+  cout<<a;
+  c=a+b;
+  a=b;
+  b=c;
+}
+cout<<a
+```
+</td>
+    <td>. C + a C . C# + b C . C + i C % ||:. F+C + t0 C. =i + C - - t0 =t0. =t0 - C ||: C ~ :|| ~ . =a + 0. =a + t1 C . =b + t1 =t1. =t1 + c C . =b + a C . =c + b C . =i + i C#:|| . =a + 0</td>
+    <td><a href="https://drive.google.com/file/d/16g8Q3fizUwiB93x_0Z24vmMFAtF9-c4k/view?usp=sharing">Listen</a></td>
+</tr>
+</tbody>
+</table>
 
-### Tuning Fork
-The Tuning Fork instruction `~` is used to break out of loops. If the note played just before `~` is `C` (ie. 0), then immediately jump to the next `:||` instruction. If there is no further `:||` instruction, then the piece will terminate.
+## Acknowledgements
+Special thanks to Stephen Stykes, for creating the idea of Choon and providing the reference interpreter in Ruby.
