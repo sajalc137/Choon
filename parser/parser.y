@@ -131,7 +131,7 @@ block_item
 printstat:
     COUT '<''<' IDENTIFIER 
     {
-        fprintf(fp_choon, " . %s + 0", num_conv($4));
+        fprintf(fp_choon, " . %s + C", num_conv($4));
     }
     ;
 
