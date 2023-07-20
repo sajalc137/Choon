@@ -86,7 +86,7 @@ a+=b;
 cout<<a;
 ```
 </td>
-    <td>. C# + a C . D + b C . =b + a =a. =a + 0</td>
+    <td>. C# + a C . D + b C . =b + a =a. =a + C</td>
     <td><a href="https://drive.google.com/file/d/1J8zS4RMy27HMR_0aCRrWcm4LdvUtG8Od/view?usp=sharing">Listen</a></td>
 </tr><tr>
 <td>
@@ -97,7 +97,7 @@ a=20*30;
 cout<<a;
 ```
 </td>
-    <td>. t0 C F#+D#+C + C ||: . F+C+C + t0 =t0 :|| . F#+D#+C + C - - C ||: . F+C+C - t0 =t0 :||. =t0 + a C  . =a + 0</td>
+    <td>. t0 C F#+D#+C + C ||: . F+C+C + t0 =t0 :|| . F#+D#+C + C - - C ||: . F+C+C - t0 =t0 :||. =t0 + a C  . =a + C</td>
     <td><a href="https://drive.google.com/file/d/1nBkXnamo_A9wyi3ucjmxAxVHff3O_Svv/view?usp=sharing">Listen</a></td>
 </tr>
 <tr>
@@ -111,7 +111,7 @@ for(i=0;i<10;i++){
 cout<<a;
 ```
 </td>
-    <td>. C + a C . C + i C % ||:. F+C + t0 C. =i + C - - t0 =t0. =t0 - C ||: C ~ :|| ~. =i + a =a . =i + i C#:|| . =a + 0</td>
+    <td>. C + a C . C + i C % ||:. F+C + t0 C. =i + C - - t0 =t0. =t0 - C ||: C ~ :|| ~. =i + a =a . =i + i C#:|| . =a + C</td>
     <td><a href="https://drive.google.com/file/d/1pY-C51fgXuvlLK51AjW6l7TIlMhrwvFo/view?usp=sharing">Listen</a></td>
 </tr><tr>
 <td>
@@ -128,7 +128,7 @@ for(i=0;i<10;i++){
 cout<<a
 ```
 </td>
-    <td>. C + a C . C# + b C . C + i C % ||:. F+C + t0 C. =i + C - - t0 =t0. =t0 - C ||: C ~ :|| ~ . =a + 0. =a + t1 C . =b + t1 =t1. =t1 + c C . =b + a C . =c + b C . =i + i C#:|| . =a + 0</td>
+    <td>. C + a C . C# + b C . C + i C % ||:. F+C + t0 C. =i + C - - t0 =t0. =t0 - C ||: C ~ :|| ~ . =a + 0. =a + t1 C . =b + t1 =t1. =t1 + c C . =b + a C . =c + b C . =i + i C#:|| . =a + C</td>
     <td><a href="https://drive.google.com/file/d/16g8Q3fizUwiB93x_0Z24vmMFAtF9-c4k/view?usp=sharing">Listen</a></td>
 </tr>
 </tbody>
